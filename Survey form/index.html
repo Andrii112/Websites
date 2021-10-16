@@ -1,0 +1,82 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Survey Form</title>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+        <link rel="stylesheet" href="css\style.css">
+    </head>
+    <body>
+        <main>
+            <h1 id="title">Andrii's online store Survey Form</h1>
+            <p id="description">Thank you for helping us to improve our site</p>
+            <form id="survey-form" action="https://andriikrupa.com/submit-form">
+                <!--Name-->
+                <label for="name" id="name-label">Name</label><br>
+                <input class="form-control" type="text" id="name" name="name" placeholder="Enter your name" required><br>
+                <!--Email-->
+                <label for="email" id="email-label">Email</label><br>
+                <input class="form-control" type="email" id="email" name="email" placeholder="Enter your Email" required><br>
+                <!--Age-->
+                <label for="age" id="number-label">Age (optional)</label><br>
+                <input class="form-control" type="number" id="number" name="age" placeholder="Your age" min="18" max="100"><br>
+                <!--Lead-->
+                <label for="lead">How did you know about us?<br>
+                    <select class="form-control" name="lead" id="dropdown">
+                        <option value="select the source" disabled selected>Select the source</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="friends">Friends</option>
+                        <option value="other">Other</option>
+                    </select>
+                </label><br>
+                <!--Recommendation to a friend FIELDSET-->
+                <fieldset>
+                    <legend>Would you recommend this web-site to a friend?</legend><br>
+                    <label for="definitely">
+                        <input type="radio" id="definitely" value="definitely" name="recommendation" checked>Definitely
+                    </label><br>
+                    <label for="perhaps">
+                        <input type="radio" id="perhaps" value="perhaps" name="recommendation">Perhaps
+                    </label><br>
+                    <label for="no-way">
+                        <input type="radio" id="no-way" value="no-way" name="recommendation">No way
+                    </label><br><br>>
+                </fieldset>
+                <!--Favorite feature-->
+                <label for="fav-featute">What is your favorite feature of our web-site?<br>
+                    <select class="form-control" name="fav-featute" id="dropdown">
+                        <option value="select-an-option" disabled selected>Select an option</option>
+                        <option value="interface">Interface</option>
+                        <option value="articles">Useful articles</option>
+                        <option value="managers">Support of our managers</option>
+                        <option value="goods">Range of goods</option>
+                    </select><br>
+                </label>
+                <!--Improvement checkbox-->
+                <label for="improvement">What would you like us to improve? <span id="smaller">(Check all that apply)</span><br>
+                    <label for="article-frequency">
+                        <input type="checkbox" id="article-frequency" value="article-frequency" name="improvement">Frequency of articles published
+                    </label><br>
+                    <label for="videos">
+                        <input type="checkbox" id="videos" value="videos" name="improvement">Video content publication
+                    </label><br>
+                    <label for="review">
+                        <input type="checkbox" id="reviews" value="reviewes" name="improvement">Reviews of the items
+                    </label><br>
+                    <label for="accessibility">
+                        <input type="checkbox" name="improvement" id="accessibility" value="accessibility">Accessibility of the site
+                    </label><br>
+                </label><br>
+                <!--comments-->
+                <label for="comments">Any comments or suggestions?</label><br>
+                    <textarea name="comments" id="comments" cols="92" rows="5" placeholder="Enter your comment here..."></textarea>
+                    <!--
+                        <input class="form-control" type="text" id="comments" name="comments" placeholder="Enter your comment here..."><br><br>
+                    -->
+                <button class="form-control" type="submit" id="submit">Submit</button>
+            </form>
+        </main>
+    </body>
+</html>
